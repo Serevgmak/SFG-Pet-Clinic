@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example.sfgpetclinic</groupId>
 	<artifactId>SFG-Pet-Clinic</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>SFG-Pet-Clinic</name>
 	<description>Demo project for Spring Boot</description>
 	<packaging>pom</packaging>
@@ -56,7 +56,7 @@
 	
 	<scm>
 		<developerConnection>scm:git:https://github.com/Serevgmak/SFG-Pet-Clinic.git</developerConnection>
-	  <tag>SFG-Pet-Clinic-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<modules>

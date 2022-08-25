@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.example.sfgpetclinic</groupId>
     <artifactId>SFG-Pet-Clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
   </parent>
   <artifactId>pet-clinic-web</artifactId>
   <name>pet-clinic-web</name>
@@ -17,7 +17,7 @@
   		<dependency>
   			<groupId>com.example.sfgpetclinic</groupId>
 			<artifactId>Pet-Clinic-Data</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.3-SNAPSHOT</version>
   		</dependency>
   		
   		
