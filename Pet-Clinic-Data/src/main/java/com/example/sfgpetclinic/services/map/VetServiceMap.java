@@ -11,12 +11,6 @@ import com.example.sfgpetclinic.services.VetService;
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
-	public Vet save(Vet object) {
-		// TODO Auto-generated method stub
-		return super.save(object.getId(), object);
-	}
-
-	@Override
 	public Set<Vet> findAll() {
 		// TODO Auto-generated method stub
 		return super.findAll();
@@ -29,9 +23,9 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 	}
 
 	@Override
-	public Vet save(Long id, Vet object) {
+	public Vet save(Vet object) {
 		// TODO Auto-generated method stub
-		return super.save(id, object);
+		return super.save(object);
 	}
 
 	@Override

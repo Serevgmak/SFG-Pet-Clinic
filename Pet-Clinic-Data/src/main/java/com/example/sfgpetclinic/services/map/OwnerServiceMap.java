@@ -11,12 +11,6 @@ import com.example.sfgpetclinic.services.OwnerService;
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
-	public Owner save(Owner object) {
-		// TODO Auto-generated method stub
-		return super.save(object.getId(), object);
-	}
-
-	@Override
 	public Set<Owner> findAll() {
 		// TODO Auto-generated method stub
 		return super.findAll();
@@ -29,9 +23,9 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	}
 
 	@Override
-	public Owner save(Long id, Owner object) {
+	public Owner save(Owner object) {
 		// TODO Auto-generated method stub
-		return super.save(id, object);
+		return super.save(object);
 	}
 
 	@Override
