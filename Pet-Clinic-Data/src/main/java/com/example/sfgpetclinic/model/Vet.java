@@ -7,4 +7,8 @@ public class Vet extends Person {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Vet() {
+		// TODO Auto-generated constructor stub
+	}
+
 }

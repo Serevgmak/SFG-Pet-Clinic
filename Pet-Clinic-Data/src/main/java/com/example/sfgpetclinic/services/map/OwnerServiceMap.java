@@ -3,9 +3,9 @@ package com.example.sfgpetclinic.services.map;
 import java.util.Set;
 
 import com.example.sfgpetclinic.model.Owner;
-import com.example.sfgpetclinic.services.CrudService;
+import com.example.sfgpetclinic.services.OwnerService;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Owner save(Owner object) {
@@ -41,6 +41,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	public void delete(Owner object) {
 		// TODO Auto-generated method stub
 		super.delete(object);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

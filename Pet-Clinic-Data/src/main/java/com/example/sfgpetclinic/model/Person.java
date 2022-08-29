@@ -5,6 +5,11 @@ public class Person extends BaseEntity {
 	private String firstName;
 	private String lastName;
 
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Person(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
