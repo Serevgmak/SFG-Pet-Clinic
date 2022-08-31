@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Vet extends Person {
 
-	private Set<Specialty> specialities = new HashSet<>();
+	private Set<Speciality> specialities = new HashSet<>();
 
 	public Vet(String firstName, String lastName) {
 		super(firstName, lastName);
@@ -16,11 +16,11 @@ public class Vet extends Person {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Set<Specialty> getSpecialities() {
+	public Set<Speciality> getSpecialities() {
 		return specialities;
 	}
 
-	public void setSpecialities(Set<Specialty> specialities) {
+	public void setSpecialities(Set<Speciality> specialities) {
 		this.specialities = specialities;
 	}
 
