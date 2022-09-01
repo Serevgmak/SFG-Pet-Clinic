@@ -3,9 +3,20 @@ package com.example.sfgpetclinic.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "vets")
 public class Vet extends Person {
 
-	private Set<Speciality> specialities = new HashSet<>();
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"), inverseJoinColumns = @JoinColumn(name = "specialty_id"))
+	private Set<Speciality> specialties = new HashSet<>();
 
 	public Vet(String firstName, String lastName) {
 		super(firstName, lastName);
@@ -16,12 +27,12 @@ public class Vet extends Person {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Set<Speciality> getSpecialities() {
-		return specialities;
+	public Set<Speciality> getSpecialties() {
+		return specialties;
 	}
 
-	public void setSpecialities(Set<Speciality> specialities) {
-		this.specialities = specialities;
+	public void setSpecialities(Set<Speciality> specialties) {
+		this.specialties = specialties;
 	}
 
 }

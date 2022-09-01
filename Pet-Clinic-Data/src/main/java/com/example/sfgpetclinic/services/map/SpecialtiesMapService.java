@@ -8,7 +8,7 @@ import com.example.sfgpetclinic.model.Speciality;
 import com.example.sfgpetclinic.services.SpecialityService;
 
 @Service
-public class SpecialitiesMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
+public class SpecialtiesMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
 
 	@Override
 	public Set<Speciality> findAll() {
