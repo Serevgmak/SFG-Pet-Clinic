@@ -15,6 +15,7 @@ import com.example.sfgpetclinic.services.OwnerService;
 
 @Service
 @Profile("springdatajpa")
+//@Primary
 public class OwnerSDJpaService implements OwnerService {
 
 	private final OwnerRepository ownerRepository;
@@ -53,6 +54,7 @@ public class OwnerSDJpaService implements OwnerService {
 	@Override
 	public Owner save(Owner object) {
 		// TODO Auto-generated method stub
+		System.out.println("Saving owner with OwnerSDJpaService");
 		return ownerRepository.save(object);
 	}
 
