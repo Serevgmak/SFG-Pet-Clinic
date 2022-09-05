@@ -12,17 +12,6 @@ public class Person extends BaseEntity {
 	@Column(name = "last_name")
 	private String lastName;
 
-	public Person() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Person(String firstName, String lastName) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
-
 	public String getFirstName() {
 		return firstName;
 	}

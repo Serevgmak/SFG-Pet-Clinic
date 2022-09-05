@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.example.sfgpetclinic.model.Owner;
@@ -14,7 +14,7 @@ import com.example.sfgpetclinic.repositories.PetTypeRepository;
 import com.example.sfgpetclinic.services.OwnerService;
 
 @Service
-@Primary
+@Profile("springdatajpa")
 public class OwnerSDJpaService implements OwnerService {
 
 	private final OwnerRepository ownerRepository;

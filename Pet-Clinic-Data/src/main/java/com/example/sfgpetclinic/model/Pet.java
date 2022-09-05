@@ -33,12 +33,12 @@ public class Pet extends BaseEntity {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
 	private Set<Visit> visits = new HashSet<>();
 
-	public Pet(PetType petType, Owner owner, LocalDate birthDate) {
-		super();
-		this.petType = petType;
-		this.owner = owner;
-		this.birthDate = birthDate;
-	}
+//	public Pet(PetType petType, Owner owner, LocalDate birthDate) {
+//		super();
+//		this.petType = petType;
+//		this.owner = owner;
+//		this.birthDate = birthDate;
+//	}
 
 	public Pet() {
 		// TODO Auto-generated constructor stub

@@ -18,15 +18,6 @@ public class Vet extends Person {
 	@JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"), inverseJoinColumns = @JoinColumn(name = "specialty_id"))
 	private Set<Speciality> specialties = new HashSet<>();
 
-	public Vet(String firstName, String lastName) {
-		super(firstName, lastName);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Vet() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public Set<Speciality> getSpecialties() {
 		return specialties;
 	}
