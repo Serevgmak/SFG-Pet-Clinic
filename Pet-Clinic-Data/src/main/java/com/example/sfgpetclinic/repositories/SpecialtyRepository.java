@@ -2,6 +2,8 @@ package com.example.sfgpetclinic.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface SpecialtyRepository extends CrudRepository<Specialty, Long> {
+import com.example.sfgpetclinic.model.Speciality;
+
+public interface SpecialtyRepository extends CrudRepository<Speciality, Long> {
 
 }
