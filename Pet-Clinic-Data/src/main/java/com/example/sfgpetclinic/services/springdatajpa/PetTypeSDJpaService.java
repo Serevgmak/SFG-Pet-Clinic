@@ -32,10 +32,10 @@ public class PetTypeSDJpaService implements PetTypeService {
 
 	@Override
 	public PetType findById(Long id) {
-		Optional<PetType> optionalVet = petTypeRepository.findById(id);
+		Optional<PetType> optionalPetType = petTypeRepository.findById(id);
 
-		if (optionalVet.isPresent()) {
-			return optionalVet.get();
+		if (optionalPetType.isPresent()) {
+			return optionalPetType.get();
 		} else {
 			return null;
 		}
