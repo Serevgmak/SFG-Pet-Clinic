@@ -21,7 +21,7 @@ import com.example.sfgpetclinic.services.OwnerService;
 @Controller
 public class OwnerController {
 
-	private static final String CREATE_OR_UPDATE_OWNER_FORM = "owners/createOrUpdateOwnerForm";
+	private static final String OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 	private final OwnerService ownerService;
 
 	public OwnerController(OwnerService ownerService) {
@@ -87,13 +87,13 @@ public class OwnerController {
 	@GetMapping("/new")
 	public String initCreationOwnerForm(Model model) {
 		model.addAttribute("owner", Owner.builder().build());
-		return CREATE_OR_UPDATE_OWNER_FORM;
+		return OWNER_CREATE_OR_UPDATE_FORM;
 	}
 
 	@PostMapping("/new")
 	public String processCreationOwnerForm(@Validated Owner owner, BindingResult result) {
 		if (result.hasErrors()) {
-			return CREATE_OR_UPDATE_OWNER_FORM;
+			return OWNER_CREATE_OR_UPDATE_FORM;
 		} else {
 			Owner savedOwner = ownerService.save(owner);
 			return "redirect:/owners/" + savedOwner.getId();
@@ -103,13 +103,13 @@ public class OwnerController {
 	@GetMapping("/{ownerId}/edit")
 	public String initUpdateOwnerForm(@PathVariable Long ownerId, Model model) {
 		model.addAttribute(ownerService.findById(ownerId));
-		return CREATE_OR_UPDATE_OWNER_FORM;
+		return OWNER_CREATE_OR_UPDATE_FORM;
 	}
 
 	@PostMapping("/{ownerId}/edit")
 	public String processUpdateOwnerForm(@Validated Owner owner, BindingResult result, @PathVariable Long ownerId) {
 		if (result.hasErrors()) {
-			return CREATE_OR_UPDATE_OWNER_FORM;
+			return OWNER_CREATE_OR_UPDATE_FORM;
 		} else {
 			owner.setId(ownerId);
 			Owner savedOwner = ownerService.save(owner);
