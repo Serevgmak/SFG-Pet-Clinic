@@ -16,4 +16,5 @@ public class IndexController {
 	public String oupsHandler() {
 		return "notimplemented";
 	}
+
 }
