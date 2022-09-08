@@ -96,6 +96,11 @@
 			
 			<plugin>
   				<artifactId>maven-surefire-plugin</artifactId>
+  				<configuration>
+  					<argLine>
+  						--illegal-access=permit
+  					</argLine>
+  				</configuration>
   				<dependencies>
   				<dependency>
   					<groupId>org.junit.platform</groupId>
